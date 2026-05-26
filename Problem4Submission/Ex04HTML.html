@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ex04</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Ex04HTML</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7810,29 +7810,18 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=45b44044">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Exercise-4.1:">Exercise 4.1:<a class="anchor-link" href="#Exercise-4.1:">¶</a></h1><p>Evolution of age distribution.</p>
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fe3ca600">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pip</span> install numpy
-<span class="o">%</span><span class="k">pip</span> install pandas
-<span class="o">%</span><span class="k">pip</span> install matplot
-<span class="o">%</span><span class="k">pip</span> install scipy
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pip</span> install numpy -qqq
+<span class="o">%</span><span class="k">pip</span> install pandas -qqq
+<span class="o">%</span><span class="k">pip</span> install matplot -qqq
+<span class="o">%</span><span class="k">pip</span> install scipy -qqq
 </pre></div>
 </div>
 </div>
@@ -7845,59 +7834,23 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: numpy in .\.venv\Lib\site-packages (2.4.6)
+<pre>Note: you may need to restart the kernel to use updated packages.
 Note: you may need to restart the kernel to use updated packages.
-Requirement already satisfied: pandas in .\.venv\Lib\site-packages (3.0.3)
-Requirement already satisfied: numpy&gt;=2.3.3 in .\.venv\Lib\site-packages (from pandas) (2.4.6)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in .\.venv\Lib\site-packages (from pandas) (2.9.0.post0)
-Requirement already satisfied: tzdata in .\.venv\Lib\site-packages (from pandas) (2026.2)
-Requirement already satisfied: six&gt;=1.5 in .\.venv\Lib\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
 Note: you may need to restart the kernel to use updated packages.
-Requirement already satisfied: matplot in .\.venv\Lib\site-packages (0.1.9)
-Requirement already satisfied: pyloco&gt;=0.0.134 in .\.venv\Lib\site-packages (from matplot) (0.0.139)
-Requirement already satisfied: matplotlib&gt;=3.1.1 in .\.venv\Lib\site-packages (from matplot) (3.10.9)
-Requirement already satisfied: contourpy&gt;=1.0.1 in .\.venv\Lib\site-packages (from matplotlib&gt;=3.1.1-&gt;matplot) (1.3.3)
-Requirement already satisfied: cycler&gt;=0.10 in .\.venv\Lib\site-packages (from matplotlib&gt;=3.1.1-&gt;matplot) (0.12.1)
-Requirement already satisfied: fonttools&gt;=4.22.0 in .\.venv\Lib\site-packages (from matplotlib&gt;=3.1.1-&gt;matplot) (4.63.0)
-Requirement already satisfied: kiwisolver&gt;=1.3.1 in .\.venv\Lib\site-packages (from matplotlib&gt;=3.1.1-&gt;matplot) (1.5.0)
-Requirement already satisfied: numpy&gt;=1.23 in .\.venv\Lib\site-packages (from matplotlib&gt;=3.1.1-&gt;matplot) (2.4.6)
-Requirement already satisfied: packaging&gt;=20.0 in .\.venv\Lib\site-packages (from matplotlib&gt;=3.1.1-&gt;matplot) (26.2)
-Requirement already satisfied: pillow&gt;=8 in .\.venv\Lib\site-packages (from matplotlib&gt;=3.1.1-&gt;matplot) (12.2.0)
-Requirement already satisfied: pyparsing&gt;=3 in .\.venv\Lib\site-packages (from matplotlib&gt;=3.1.1-&gt;matplot) (3.3.2)
-Requirement already satisfied: python-dateutil&gt;=2.7 in .\.venv\Lib\site-packages (from matplotlib&gt;=3.1.1-&gt;matplot) (2.9.0.post0)
-Requirement already satisfied: ushlex in .\.venv\Lib\site-packages (from pyloco&gt;=0.0.134-&gt;matplot) (0.99.1)
-Requirement already satisfied: websocket-client in .\.venv\Lib\site-packages (from pyloco&gt;=0.0.134-&gt;matplot) (1.9.0)
-Requirement already satisfied: twine in .\.venv\Lib\site-packages (from pyloco&gt;=0.0.134-&gt;matplot) (6.2.0)
-Requirement already satisfied: typing in .\.venv\Lib\site-packages (from pyloco&gt;=0.0.134-&gt;matplot) (3.7.4.3)
-Requirement already satisfied: SimpleWebSocketServer in .\.venv\Lib\site-packages (from pyloco&gt;=0.0.134-&gt;matplot) (0.1.2)
-Requirement already satisfied: six&gt;=1.5 in .\.venv\Lib\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib&gt;=3.1.1-&gt;matplot) (1.17.0)
-Requirement already satisfied: readme-renderer&gt;=35.0 in .\.venv\Lib\site-packages (from twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (44.0)
-Requirement already satisfied: requests&gt;=2.20 in .\.venv\Lib\site-packages (from twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (2.34.2)
-Requirement already satisfied: requests-toolbelt!=0.9.0,&gt;=0.8.0 in .\.venv\Lib\site-packages (from twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (1.0.0)
-Requirement already satisfied: urllib3&gt;=1.26.0 in .\.venv\Lib\site-packages (from twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (2.7.0)
-Requirement already satisfied: keyring&gt;=21.2.0 in .\.venv\Lib\site-packages (from twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (25.7.0)
-Requirement already satisfied: rfc3986&gt;=1.4.0 in .\.venv\Lib\site-packages (from twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (2.0.0)
-Requirement already satisfied: rich&gt;=12.0.0 in .\.venv\Lib\site-packages (from twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (15.0.0)
-Requirement already satisfied: id in .\.venv\Lib\site-packages (from twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (1.6.1)
-Requirement already satisfied: pywin32-ctypes&gt;=0.2.0 in .\.venv\Lib\site-packages (from keyring&gt;=21.2.0-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (0.2.3)
-Requirement already satisfied: jaraco.classes in .\.venv\Lib\site-packages (from keyring&gt;=21.2.0-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (3.4.0)
-Requirement already satisfied: jaraco.functools in .\.venv\Lib\site-packages (from keyring&gt;=21.2.0-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (4.5.0)
-Requirement already satisfied: jaraco.context in .\.venv\Lib\site-packages (from keyring&gt;=21.2.0-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (6.1.2)
-Requirement already satisfied: nh3&gt;=0.2.14 in .\.venv\Lib\site-packages (from readme-renderer&gt;=35.0-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (0.3.5)
-Requirement already satisfied: docutils&gt;=0.21.2 in .\.venv\Lib\site-packages (from readme-renderer&gt;=35.0-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (0.22.4)
-Requirement already satisfied: Pygments&gt;=2.5.1 in .\.venv\Lib\site-packages (from readme-renderer&gt;=35.0-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (2.20.0)
-Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in .\.venv\Lib\site-packages (from requests&gt;=2.20-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (3.4.7)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in .\.venv\Lib\site-packages (from requests&gt;=2.20-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (3.16)
-Requirement already satisfied: certifi&gt;=2023.5.7 in .\.venv\Lib\site-packages (from requests&gt;=2.20-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (2026.5.20)
-Requirement already satisfied: markdown-it-py&gt;=2.2.0 in .\.venv\Lib\site-packages (from rich&gt;=12.0.0-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (4.2.0)
-Requirement already satisfied: mdurl~=0.1 in .\.venv\Lib\site-packages (from markdown-it-py&gt;=2.2.0-&gt;rich&gt;=12.0.0-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (0.1.2)
-Requirement already satisfied: more-itertools in .\.venv\Lib\site-packages (from jaraco.classes-&gt;keyring&gt;=21.2.0-&gt;twine-&gt;pyloco&gt;=0.0.134-&gt;matplot) (11.1.0)
-Note: you may need to restart the kernel to use updated packages.
-Requirement already satisfied: scipy in .\.venv\Lib\site-packages (1.17.1)
-Requirement already satisfied: numpy&lt;2.7,&gt;=1.26.4 in .\.venv\Lib\site-packages (from scipy) (2.4.6)
 Note: you may need to restart the kernel to use updated packages.
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9dfa212a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Exercise-4.1:">Exercise 4.1:<a class="anchor-link" href="#Exercise-4.1:">¶</a></h1><p>Evolution of age distribution.</p>
 </div>
 </div>
 </div>
@@ -7906,7 +7859,7 @@ Note: you may need to restart the kernel to use updated packages.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -8087,7 +8040,7 @@ Saved → c:\Users\Umer\Documents\UniGOttingen\Visualization\Visualization\Probl
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
